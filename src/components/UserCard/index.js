@@ -18,10 +18,16 @@ const UserCard = (props) => {
         <tbody>
           <tr>
             <td>
-              <img className="userImage" src={props.source} alt="user" />
+              <img
+                className="userImage"
+                src={props.src}
+                alt="user"
+              />
             </td>
-            <td>{props.name}</td>
-            <td>{props.number}</td>
+            <td>
+              {props.firstName} {props.lastName}
+            </td>
+            <td>{props.phone}</td>
             <td>{props.email}</td>
             <td>{props.age}</td>
           </tr>
