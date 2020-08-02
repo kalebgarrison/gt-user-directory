@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/gt-user-directory/static/css/main.5f361e03.chunk.css",
+    "main.js": "/gt-user-directory/static/js/main.99a7cff2.chunk.js",
+    "main.js.map": "/gt-user-directory/static/js/main.99a7cff2.chunk.js.map",
+    "runtime-main.js": "/gt-user-directory/static/js/runtime-main.21095409.js",
+    "runtime-main.js.map": "/gt-user-directory/static/js/runtime-main.21095409.js.map",
+    "static/js/2.b760bce1.chunk.js": "/gt-user-directory/static/js/2.b760bce1.chunk.js",
+    "static/js/2.b760bce1.chunk.js.map": "/gt-user-directory/static/js/2.b760bce1.chunk.js.map",
+    "index.html": "/gt-user-directory/index.html",
+    "precache-manifest.cb3a97846dc5e740b38d3d1fe9a4f1cb.js": "/gt-user-directory/precache-manifest.cb3a97846dc5e740b38d3d1fe9a4f1cb.js",
+    "service-worker.js": "/gt-user-directory/service-worker.js",
+    "static/css/main.5f361e03.chunk.css.map": "/gt-user-directory/static/css/main.5f361e03.chunk.css.map",
+    "static/js/2.b760bce1.chunk.js.LICENSE.txt": "/gt-user-directory/static/js/2.b760bce1.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.21095409.js",
+    "static/js/2.b760bce1.chunk.js",
+    "static/css/main.5f361e03.chunk.css",
+    "static/js/main.99a7cff2.chunk.js"
+  ]
+}
