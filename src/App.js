@@ -7,7 +7,6 @@ import UserCard from "./components/UserCard";
 import API from "./utils/API";
 
 class App extends Component {
- 
   state = {
     users: [],
     search: "",
@@ -15,10 +14,6 @@ class App extends Component {
     results: {},
     error: "",
   };
-  
- 
- 
-  
 
   componentDidMount() {
     this.createUsers();
@@ -53,43 +48,53 @@ class App extends Component {
         this.setState({
           filteredUsers: res.data.results,
           users: res.data.results,
-          // search: this.state.search,
         })
       )
       .catch((err) => console.log(err));
   };
 
+  // This handles the search submit button action when searching using the first name
+
   handleFormSubmit = (event) => {
     event.preventDefault();
-    console.log(this.state);
-    
-    // const filter = event.target.value;
-    // const filteredUsers = this.state.users.filter((item) => {
-    //   // merge data together, then see if user input is anywhere inside
-    //   let values = Object.values(item).join("").toLowerCase();
-    //   return values.indexOf(filter.toLowerCase()) !== -1;
-    // });
-      const {users, search} = this.state;
 
-      const filteredUsers = users.filter(users => users.name.first.toLowerCase().includes(search.toLowerCase()));
-      console.log(users)
-    // console.log(this.state.value);
+    const { users, search } = this.state;
+
+    const filteredUsers = users.filter((users) =>
+      users.name.first.toLowerCase().includes(search.toLowerCase())
+    );
     this.setState({ users: filteredUsers });
+  };
+
+  // This function sorts users by their first name
+  sortUsers = () => {
+    function compare(a, b) {
+      if (a.name.first > b.name.first) return 1;
+      if (b.name.first > a.name.first) return -1;
+      return 0;
+    }
+    const sortedUsers = this.state.users.sort(compare);
+    console.log(sortedUsers);
+    this.setState({
+      users: sortedUsers,
+    });
   };
 
   render() {
     return (
       <div>
-        <Banner />,
+        <Banner />
         <Wrapper>
-          <Search name="search"
-          onChange={this.handleInputChange}
-          value={this.state.search}
-          onClick={this.handleFormSubmit}
-          input={this.state.input}
+          <Search
+            name="search"
+            onChange={this.handleInputChange}
+            value={this.state.search}
+            onClick={this.handleFormSubmit}
+            input={this.state.input}
           />
           {this.state.users.map((user) => (
             <UserCard
+              onClick={this.sortUsers}
               src={user.picture.large}
               firstName={user.name.first}
               lastName={user.name.last}
