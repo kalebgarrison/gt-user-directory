@@ -2,7 +2,7 @@ import React from "react";
 import "./style.css";
 
 const UserCard = (props) => {
-  console.log(props);
+  // console.log(props);
   return (
     <div>
       <table className="table">
