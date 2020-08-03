@@ -25,7 +25,7 @@ Any feedback can be provided via email at [kalebgarrison@gmail.com](mailto:kaleb
 
 [GitHub Repo Site](https://github.com/kalebgarrison/gt-user-directory)
 
-![alt text](assets/images/budgettracker.png) 
+![alt text](assets/images/userdirectory.png) 
 
 
 
